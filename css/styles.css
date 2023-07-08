@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* Global Rules */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.background {
+    width: 50vw;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 250px 0;
+    background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+/* Chat app illustration */
+
+/* app header */
+
+.chat-app {
+    width: 250px;
+    margin: 100px auto 0;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 20px 10px hsla(270, 7%, 64%, 35%);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.chat-app .app-container {
+    background-color: hsl(270, 20%, 96%);
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.chat-app .header {
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 15px 10px;
+    border-radius: 0.5em;
+    position: relative;
+    color: hsl(0, 0%, 100%);
+}
+
+.chat-app .header::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: hsl(0, 0%, 100%);
+    width: 55%;
+    height: 20px;
+    transform: translateX(-50%);
+    border-radius: 0 0 15px 15px;
+}
+
+.chat-app .header i {
+    font-size: 0.8rem;
+}
+
+.chat-app .header .arrow-icon {
+    margin-right: 5px;
+}
+
+.chat-app .header img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid hsl(0, 0%, 100%);
+    margin-right: 10px;
+}
+
+.chat-app .header h2 {
+    font-size: 0.7rem;
+}
+
+.chat-app .header p {
+    font-size: 0.5rem;
+    color: hsl(276, 100%, 81%);
+}
+
+.chat-app .header .menu-icon {
+    margin-left: auto;
+}
+
+/* Chat section */
+.chat-app .chat {
+    padding: 0.5em;
+}
+
+.chat-app .chat .message {
+    width: fit-content;
+    max-width: 70%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-size: 0.6rem;
+}
+
+.chat-app .chat .message--left {
+    background-color: hsl(276, 100%, 92%);
+    color: hsl(276, 55%, 52%);
+    margin-right: auto;
+    border-radius: 1em 1em 1em 0.5em;
+}
+
+.chat-app .chat .message--right {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(271, 15%, 43%);
+    margin-left: auto;
+    border-radius: 1em 1em 0.5em 1em;
+    box-shadow: 0 5px 5px hsl(270, 20%, 88%);
+}
+
+.chat-app .chat .radio-message {
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    color: hsl(0, 0%, 100%);
+    width: 80%;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.chat-app .chat .radio-message .radio-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid hsl(289, 100%, 72%);
+}
+
+.chat-app .chat .radio-message .description {
+    margin-left: 0.5em;
+}
+
+.chat-app .chat .radio-message .price {
+    font-weight: 700;
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+.chat-app .chat .images-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 1em 0 1em auto;
+}
+
+.chat-app .chat .images-grid img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* Typing section */
+.chat-app .chat .typing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 3em;
+}
+
+.chat-app .chat .typing p {
+    color: hsl(206, 6%, 79%);
+    margin-left: 1em;
+    font-size: 0.6rem;
+}
+
+.chat-app .chat .typing i {
+    background-color: hsl(271, 36%, 24%);
+    color: hsl(0, 0%, 100%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+/* App description */
+.app-description {
+    text-align: center;
+    padding: 2em;
+}
+
+.app-description h1 {
+    color: hsl(271, 36%, 24%);
+    font-size: 2em;
+}
+
+.app-description p {
+    color: hsl(270, 7%, 64%);
+    line-height: 1.8;
+    font-size: 1em;
+}
+
+/* Media */
+@media (min-width: 700px) {
+    .background {
+        width: 475px;
+        height: 90vh;
+        left: -100px;
+        border-radius: 0 0 250px 250px;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1100px;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+    .chat-app {
+        margin-top: 0;
+    }
+
+    .app-description {
+        width: 50%;
+        text-align: left;
+    }
+}
